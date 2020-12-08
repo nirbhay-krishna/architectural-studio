@@ -1,0 +1,57 @@
+//- layout.pug
+doctype html
+html
+    head
+        title Architectural-website
+        block scripts
+        block style
+    body
+        // navbar section
+    nav.navbar
+        div#logo
+            img(src='../static/img/logo.png' alt='logo')
+        div
+            hr#hr
+        div
+            h2 Architectural Studio
+        div
+            hr#hr1
+        ul
+            li.navitems
+                a(href='/home') Home
+            hr
+            li.navitems
+                a(href='/about') About
+            hr
+            li.navitems
+                a(href='/portfolio') Portfolio
+            hr
+            li.navitems
+                a(href='/book') Book Online
+            hr
+            li.navitems
+                a(href='/contact') Contact
+            li.navitems
+                // <img src="login.png" alt="login">
+                a(href='#login') Log In
+
+    block content
+    // footer section
+    div
+        hr#hr2
+    footer.footer
+        ul
+            li.ft &amp;copy 2021 by Architectural Studio 
+            // <hr>
+            li.ft +91-74108520963
+            hr
+            li.ft info@example.com
+            li.ft.footer-logo
+                a(href='facebook.com')
+                    img(src='/static/img/fb.png' height='25px' width='25px')
+            li.ft.footer-logo
+                a(href='twitter.com')
+                    img(src='/static/img/twitter.png' height='25px' width='25px')
+            li.ft.footer-logo
+                a(href='instagram.com')
+                    img(src='/static/img/insta.png' height='25px' width='25px')

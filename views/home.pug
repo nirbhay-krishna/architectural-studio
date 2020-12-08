@@ -1,0 +1,36 @@
+extends base.pug
+
+block scripts
+    script(src='/static/index.js')
+
+block style
+    style
+        include ../static/stylesheets/style.css
+block content
+    // home section
+    section.home-container
+        section#box1
+            img(src='../static/img/home1.jpg' alt='interior')
+        #box2.center Minimal Design, Maximum Impact
+        #box3
+            img(src='/static/img/home2.jpg' alt='interior')
+        #box4
+            img(src='/static/img/home3.jpg' alt='interior')
+        #box5
+            h2 Interior Design Studio
+            p
+                | Here we&apos;ve collected inspiration for interior design logos to help you get started...
+            .stage
+                hr#hr8
+                a(href='/about') Read More &gt;&gt;
+        #box6
+            img(src='/static/img/home4.jpg' alt='designer')
+        #box7
+            div
+                a(href='') Info@example.com
+            hr#hr7
+            #number
+                | +91-14748520963
+
+
+
