@@ -2,11 +2,11 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const app = express();
-const port = 8080;
+const port = 8000;
 // getting-started.js mongoose
 const mongoose = require('mongoose');
 const bodyparser = require("body-parser");
-mongoose.connect('mongodb://localhost/contactarch', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/contactarch', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //define mongoose schema
 const contact1Schema = new mongoose.Schema({
