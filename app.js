@@ -6,7 +6,7 @@ const port = 8000;
 // getting-started.js mongoose
 const mongoose = require('mongoose');
 const bodyparser = require("body-parser");
-mongoose.connect('mongodb://nirbhay:makabhsda@d79cc6a0-1bc1-4b04-88d8-410dee550c8b.architectural-studio-7131.mongo.dbs.scalingo.com:34059/architectural-studio-7131?authSource=architectural-studio-7131', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://0.0.0.0:27017/contactarch', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //define mongoose schema
 const contact1Schema = new mongoose.Schema({
