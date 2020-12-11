@@ -72,6 +72,6 @@ app.post("/contact", (req, res) => {
 });
 
 //start server
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
     console.log(`The application started successfully on port ${port}`)
 });
