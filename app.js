@@ -3,10 +3,22 @@ const path = require("path");
 const fs = require("fs");
 const app = express();
 const port = 8000;
+
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://nirbhay:makabhsda@cluster0.j5kgh.mongodb.net/contactarch?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("contactarch").collection("contact1Schema");
+  // perform actions on the collection object
+  client.close();
+});
+
+
 // getting-started.js mongoose
 const mongoose = require('mongoose');
 const bodyparser = require("body-parser");
-mongoose.connect('mongodb://0.0.0.0:27017/contactarch', { useNewUrlParser: true, useUnifiedTopology: true }).catch(error => handleError(error));
+// mongoose.connect('mongodb://0.0.0.0/0/contactarch', { useNewUrlParser: true, useUnifiedTopology: true }).catch(error => handleError(error));
 
 //define mongoose schema
 const contact1Schema = new mongoose.Schema({
