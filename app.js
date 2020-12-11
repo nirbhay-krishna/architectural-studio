@@ -18,6 +18,8 @@ client.connect(err => {
 // getting-started.js mongoose
 const mongoose = require('mongoose');
 const bodyparser = require("body-parser");
+app.use(express.urlencoded({ extended: true }))
+
 // mongoose.connect('mongodb://0.0.0.0/0/contactarch', { useNewUrlParser: true, useUnifiedTopology: true }).catch(error => handleError(error));
 
 //define mongoose schema
