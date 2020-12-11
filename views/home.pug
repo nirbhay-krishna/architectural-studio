@@ -1,21 +1,21 @@
 extends base.pug
 
 block scripts
-    script(src='/static/index.js')
+    script(src='/public/index.js')
 
 block style
     style
-        include ../static/stylesheets/style.css
+        include ../public/stylesheets/style.css
 block content
     // home section
     section.home-container
         section#box1
-            img(src='../static/img/home1.jpg' alt='interior')
+            img(src='../public/img/home1.jpg' alt='interior')
         #box2.center Minimal Design, Maximum Impact
         #box3
-            img(src='/static/img/home2.jpg' alt='interior')
+            img(src='/public/img/home2.jpg' alt='interior')
         #box4
-            img(src='/static/img/home3.jpg' alt='interior')
+            img(src='/public/img/home3.jpg' alt='interior')
         #box5
             h2 Interior Design Studio
             p
@@ -24,7 +24,7 @@ block content
                 hr#hr8
                 a(href='/about') Read More &gt;&gt;
         #box6
-            img(src='/static/img/home4.jpg' alt='designer')
+            img(src='/public/img/home4.jpg' alt='designer')
         #box7
             div
                 a(href='') Info@example.com

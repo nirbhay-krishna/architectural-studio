@@ -1,17 +1,17 @@
 extends base.pug
 block scripts
-    script(src='/static/index.js')
+    script(src='/public/index.js')
 
 block style
     style
-        include ../static/stylesheets/book.css
-        include ../static/stylesheets/style.css
+        include ../public/stylesheets/book.css
+        include ../public/stylesheets/style.css
 block content
     div.box
         div.item1.auto Services
     div.box 
         div.item2.auto   
-            img(src="/static/img/rd.jpg", alt="")
+            img(src="/public/img/rd.jpg", alt="")
             div.designtype Residential Design 
             div.time 1 hr
             div.meeting Consultation Meeting
@@ -20,14 +20,14 @@ block content
                 
                 
         div.item2.auto   
-            img(src="/static/img/rd.jpg", alt="")
+            img(src="/public/img/rd.jpg", alt="")
             div.designtype Workspace Design 
             div.time 1 hr
             div.meeting Consultation Meeting
             div 
                 button.btn Let's talk 
         div.item2.auto   
-            img(src="/static/img/id.jpg", alt="")
+            img(src="/public/img/id.jpg", alt="")
             div.designtype Interior Design 
             div.time 1 hr
             div.meeting Consultation Meeting

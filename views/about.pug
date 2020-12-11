@@ -1,11 +1,11 @@
 extends base.pug
 block scripts
-    script(src='/static/index.js')
+    script(src='/public/index.js')
 
 block style
     style
-        include ../static/stylesheets/about.css
-        include ../static/stylesheets/style.css
+        include ../public/stylesheets/about.css
+        include ../public/stylesheets/style.css
 block content
     section.about-container
         div#box1home About Our Studio
@@ -17,7 +17,7 @@ block content
             h2 Our Team
         div#box4home
 
-            //- img(src="/static/img/team1.jpg" alt="team1")
+            //- img(src="/public/img/team1.jpg" alt="team1")
         div#box5home
             //- img(src="/static/img/team2.jpg" alt="team1")
         div#box6home
