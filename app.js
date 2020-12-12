@@ -2,14 +2,13 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const app = express();
-const port = 8000;
-
+const port = process.env.PORT || "8000";
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://nirbhay:makabhsda@cluster0.j5kgh.mongodb.net/contactarch?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
-  const collection = client.db("contactarch").collection("contact1Schema");
+  const collection = client.db("contactarch").collection("Contact1");
   // perform actions on the collection object
   client.close();
 });
@@ -17,8 +16,11 @@ client.connect(err => {
 
 // getting-started.js mongoose
 const mongoose = require('mongoose');
-const bodyparser = require("body-parser");
-app.use(express.urlencoded({ extended: true }))
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
 
 // mongoose.connect('mongodb://0.0.0.0/0/contactarch', { useNewUrlParser: true, useUnifiedTopology: true }).catch(error => handleError(error));
 
@@ -86,6 +88,6 @@ app.post("/contact", (req, res) => {
 });
 
 //start server
-app.listen(port,'0.0.0.0', () => {
+app.listen(port, () => {
     console.log(`The application started successfully on port ${port}`)
 });
